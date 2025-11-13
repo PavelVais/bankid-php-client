@@ -10,6 +10,7 @@ class Profile
 {
     /**
      * @param string|null $customerUuid
+     * @param string $transactionIdentifier
      * @param string|null $givenName
      * @param string|null $familyName
      * @param string|null $titlePrefix
@@ -35,8 +36,10 @@ class Profile
      * @param int|null $updatedAt
      * @param ?VerifiedClaims $verifiedClaims
      */
+
     public function __construct(
         public readonly ?string $customerUuid,
+        public readonly string $transactionIdentifier,
         public readonly ?string $givenName,
         public readonly ?string $familyName,
         public readonly ?string $titlePrefix,
@@ -88,6 +91,7 @@ class Profile
 
         return new self(
             $data['sub'] ?? null,
+            $data['txn'],
             $data['given_name'] ?? null,
             $data['family_name'] ?? null,
             $data['title_prefix'] ?? null,
