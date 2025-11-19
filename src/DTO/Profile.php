@@ -10,7 +10,6 @@ class Profile
 {
     /**
      * @param string|null $customerUuid
-     * @param string $transactionIdentifier
      * @param string|null $givenName
      * @param string|null $familyName
      * @param string|null $titlePrefix
@@ -35,11 +34,11 @@ class Profile
      * @param string[]|null $paymentAccountsDetails
      * @param int|null $updatedAt
      * @param ?VerifiedClaims $verifiedClaims
+     * @param string|null $transactionIdentifier
      */
 
     public function __construct(
         public readonly ?string $customerUuid,
-        public readonly string $transactionIdentifier,
         public readonly ?string $givenName,
         public readonly ?string $familyName,
         public readonly ?string $titlePrefix,
@@ -64,6 +63,7 @@ class Profile
         public readonly ?array $paymentAccountsDetails,
         public readonly ?int $updatedAt,
         public readonly ?VerifiedClaims $verifiedClaims,
+        public readonly ?string $transactionIdentifier = null,
     ) {
         //
     }
@@ -91,7 +91,6 @@ class Profile
 
         return new self(
             $data['sub'] ?? null,
-            $data['txn'],
             $data['given_name'] ?? null,
             $data['family_name'] ?? null,
             $data['title_prefix'] ?? null,
@@ -116,6 +115,7 @@ class Profile
             $data['paymentAccountsDetails'] ?? null,
             $data['updated_at'] ?? null,
             array_key_exists('verified_claims', $data) ? VerifiedClaims::create($data['verified_claims']) : null,
+            $data['txn'] ?? null,
         );
     }
 }
