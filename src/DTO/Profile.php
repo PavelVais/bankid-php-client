@@ -36,7 +36,6 @@ class Profile
      * @param ?VerifiedClaims $verifiedClaims
      * @param string|null $transactionIdentifier
      */
-
     public function __construct(
         public readonly ?string $customerUuid,
         public readonly ?string $givenName,
