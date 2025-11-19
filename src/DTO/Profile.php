@@ -34,6 +34,7 @@ class Profile
      * @param string[]|null $paymentAccountsDetails
      * @param int|null $updatedAt
      * @param ?VerifiedClaims $verifiedClaims
+     * @param string|null $transactionIdentifier
      */
     public function __construct(
         public readonly ?string $customerUuid,
@@ -61,6 +62,7 @@ class Profile
         public readonly ?array $paymentAccountsDetails,
         public readonly ?int $updatedAt,
         public readonly ?VerifiedClaims $verifiedClaims,
+        public readonly ?string $transactionIdentifier = null,
     ) {
         //
     }
@@ -112,6 +114,7 @@ class Profile
             $data['paymentAccountsDetails'] ?? null,
             $data['updated_at'] ?? null,
             array_key_exists('verified_claims', $data) ? VerifiedClaims::create($data['verified_claims']) : null,
+            $data['txn'] ?? null,
         );
     }
 }
