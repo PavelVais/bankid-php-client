@@ -6,16 +6,16 @@ namespace Unnits\BankId\DTO;
 
 use Unnits\BankId\Enums\IdCardType;
 
-class IdCard
+readonly class IdCard
 {
     public function __construct(
-        public readonly ?IdCardType $type,
-        public readonly ?string $description,
-        public readonly ?string $country,
-        public readonly ?string $number,
-        public readonly ?string $validTo,
-        public readonly ?string $issuedBy,
-        public readonly ?string $issuedAt,
+        public ?IdCardType $type,
+        public ?string $description,
+        public ?string $country,
+        public ?string $number,
+        public ?string $validTo,
+        public ?string $issuedBy,
+        public ?string $issuedAt,
     ) {
         //
     }

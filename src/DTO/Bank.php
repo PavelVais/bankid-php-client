@@ -6,7 +6,7 @@ namespace Unnits\BankId\DTO;
 
 use Unnits\BankId\Enums\BankService;
 
-class Bank
+readonly class Bank
 {
     /**
      * @param string $id
@@ -16,11 +16,11 @@ class Bank
      * @param BankService[] $availableServices
      */
     public function __construct(
-        public readonly string $id,
-        public readonly string $title,
-        public readonly ?string $description,
-        public readonly array $bankLogo,
-        public readonly array $availableServices,
+        public string $id,
+        public string $title,
+        public ?string $description,
+        public array $bankLogo,
+        public array $availableServices,
     ) {
     }
 

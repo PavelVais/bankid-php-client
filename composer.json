@@ -37,9 +37,9 @@
     ]
   },
   "require": {
-    "php": "^8.1",
+    "php": "^8.2",
     "psr/http-client": "^1.0",
-    "web-token/jwt-framework":  "^3.3",
+    "web-token/jwt-framework":  "^4.0",
     "ext-openssl": "*"
   },
   "require-dev": {

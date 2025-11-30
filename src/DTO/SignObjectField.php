@@ -6,12 +6,12 @@ namespace Unnits\BankId\DTO;
 
 use JsonSerializable;
 
-class SignObjectField implements JsonSerializable
+readonly class SignObjectField implements JsonSerializable
 {
     public function __construct(
-        public readonly int $priority,
-        public readonly string $value,
-        public readonly string $key,
+        public int $priority,
+        public string $value,
+        public string $key,
     ) {
         //
     }

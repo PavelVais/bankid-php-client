@@ -22,7 +22,7 @@ This is a [Bank iD](https://www.bankid.cz/en) client library for PHP application
 
 ### Features
 
-- PHP `>=8.1`
+- PHP `>=8.2`
 - [Extensive user guide](./docs/user_guide.md)
 - [Static analysis](./docs/developer_guide.md#static-analysis)
 - [Automated tests](./docs/developer_guide.md#automated-tests)
@@ -33,3 +33,8 @@ This is a [Bank iD](https://www.bankid.cz/en) client library for PHP application
 - [Value object representations and DTOs](./docs/user_guide.md#value-objects-and-dtos)
 - [PSR friendly](./docs/user_guide.md#psr)
 - [Extensible](./docs/user_guide.md#extensible)
+
+### Version Compatibility
+
+- **v1.x**: PHP >= 8.2, web-token/jwt-framework ^4.0
+- **v0.x**: PHP >= 8.1, web-token/jwt-framework ^3.3

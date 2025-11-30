@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Unnits\BankId\DTO;
 
-class Verification
+readonly class Verification
 {
     public function __construct(
-        public readonly ?string $verificationDate,
-        public readonly string $verificationBank,
-        public readonly string $trustFramework,
+        public ?string $verificationDate,
+        public string $verificationBank,
+        public string $trustFramework,
     ) {
         //
     }

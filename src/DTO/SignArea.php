@@ -6,14 +6,14 @@ namespace Unnits\BankId\DTO;
 
 use JsonSerializable;
 
-class SignArea implements JsonSerializable
+readonly class SignArea implements JsonSerializable
 {
     public function __construct(
-        public readonly int $x,
-        public readonly int $y,
-        public readonly int $width,
-        public readonly int $height,
-        public readonly int $page,
+        public int $x,
+        public int $y,
+        public int $width,
+        public int $height,
+        public int $page,
     ) {
         //
     }

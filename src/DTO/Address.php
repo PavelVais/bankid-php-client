@@ -6,19 +6,19 @@ namespace Unnits\BankId\DTO;
 
 use Unnits\BankId\Enums\AddressType;
 
-class Address
+readonly class Address
 {
     public function __construct(
-        public readonly ?AddressType $type,
-        public readonly ?string $streetName,
-        public readonly ?string $streetNumber,
-        public readonly ?string $evidenceNumber,
-        public readonly ?string $buildingApartment,
-        public readonly ?string $city,
-        public readonly ?string $cityArea,
-        public readonly ?string $zipCode,
-        public readonly ?string $country,
-        public readonly ?string $ruianReference,
+        public ?AddressType $type,
+        public ?string $streetName,
+        public ?string $streetNumber,
+        public ?string $evidenceNumber,
+        public ?string $buildingApartment,
+        public ?string $city,
+        public ?string $cityArea,
+        public ?string $zipCode,
+        public ?string $country,
+        public ?string $ruianReference,
     ) {
         //
     }
