@@ -11,7 +11,7 @@ use Jose\Component\Signature\Serializer\JWSSerializerManager;
 use Unnits\BankId\Enums\Scope;
 use Unnits\BankId\Enums\TokenType;
 
-class AuthToken
+readonly class AuthToken
 {
     /**
      * @param string $value
@@ -21,11 +21,11 @@ class AuthToken
      * @param IdentityToken $identityToken
      */
     public function __construct(
-        public readonly string $value,
-        public readonly TokenType $tokenType,
-        public readonly int $expiresIn,
-        public readonly array $scopes,
-        public readonly IdentityToken $identityToken,
+        public string $value,
+        public TokenType $tokenType,
+        public int $expiresIn,
+        public array $scopes,
+        public IdentityToken $identityToken,
     ) {
         //
     }

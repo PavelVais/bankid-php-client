@@ -8,13 +8,13 @@ use Stringable;
 use Unnits\BankId\DTO\IdentityToken;
 use Unnits\BankId\Enums\LogoutUriQueryParameter as QueryParam;
 
-final class LogoutUri implements Stringable
+final readonly class LogoutUri implements Stringable
 {
     public function __construct(
-        private readonly string $baseUri,
-        private readonly string|IdentityToken $idTokenHint,
-        private readonly ?string $redirectUri = null,
-        private readonly ?string $state = null,
+        private string $baseUri,
+        private string|IdentityToken $idTokenHint,
+        private ?string $redirectUri = null,
+        private ?string $state = null,
     ) {
         //
     }

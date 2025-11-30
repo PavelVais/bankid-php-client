@@ -9,7 +9,7 @@ use Exception;
 use Unnits\BankId\Enums\Scope;
 use Unnits\BankId\Enums\TokenType;
 
-class TokenInfo
+readonly class TokenInfo
 {
     /**
      * @param bool $isActive
@@ -22,14 +22,14 @@ class TokenInfo
      * @param string $iss
      */
     public function __construct(
-        public readonly bool $isActive,
-        public readonly array $scopes,
-        public readonly string $clientId,
-        public readonly TokenType $tokenType,
-        public readonly DateTime $expiresAt,
-        public readonly DateTime $issuedAt,
-        public readonly string $sub,
-        public readonly string $iss,
+        public bool $isActive,
+        public array $scopes,
+        public string $clientId,
+        public TokenType $tokenType,
+        public DateTime $expiresAt,
+        public DateTime $issuedAt,
+        public string $sub,
+        public string $iss,
     ) {
         //
     }

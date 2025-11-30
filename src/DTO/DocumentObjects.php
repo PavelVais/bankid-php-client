@@ -7,15 +7,15 @@ namespace Unnits\BankId\DTO;
 use Exception;
 use JsonSerializable;
 
-class DocumentObjects implements JsonSerializable
+readonly class DocumentObjects implements JsonSerializable
 {
     /**
      * @param string $envelopeName
      * @param DocumentObject[] $documents
      */
     public function __construct(
-        public readonly string $envelopeName,
-        public readonly array $documents,
+        public string $envelopeName,
+        public array $documents,
     ) {
         //
     }

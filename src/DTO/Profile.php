@@ -6,7 +6,7 @@ namespace Unnits\BankId\DTO;
 
 use Unnits\BankId\Enums\Gender;
 
-class Profile
+readonly class Profile
 {
     /**
      * @param string|null $customerUuid
@@ -37,32 +37,32 @@ class Profile
      * @param string|null $transactionIdentifier
      */
     public function __construct(
-        public readonly ?string $customerUuid,
-        public readonly ?string $givenName,
-        public readonly ?string $familyName,
-        public readonly ?string $titlePrefix,
-        public readonly ?string $titleSuffix,
-        public readonly ?Gender $gender,
-        public readonly ?int $age,
-        public readonly ?string $birthDate,
-        public readonly ?string $birthNumber,
-        public readonly ?string $birthPlace,
-        public readonly ?string $birthCountry,
-        public readonly ?string $primaryNationality,
-        public readonly ?array $nationalities,
-        public readonly ?string $maritalStatus,
-        public readonly ?bool $majority,
-        public readonly ?string $email,
-        public readonly ?string $phoneNumber,
-        public readonly ?bool $limitedLegalCapacity,
-        public readonly ?bool $pep,
-        public readonly ?array $addresses,
-        public readonly ?array $idCards,
-        public readonly ?array $paymentAccounts,
-        public readonly ?array $paymentAccountsDetails,
-        public readonly ?int $updatedAt,
-        public readonly ?VerifiedClaims $verifiedClaims,
-        public readonly ?string $transactionIdentifier = null,
+        public ?string $customerUuid,
+        public ?string $givenName,
+        public ?string $familyName,
+        public ?string $titlePrefix,
+        public ?string $titleSuffix,
+        public ?Gender $gender,
+        public ?int $age,
+        public ?string $birthDate,
+        public ?string $birthNumber,
+        public ?string $birthPlace,
+        public ?string $birthCountry,
+        public ?string $primaryNationality,
+        public ?array $nationalities,
+        public ?string $maritalStatus,
+        public ?bool $majority,
+        public ?string $email,
+        public ?string $phoneNumber,
+        public ?bool $limitedLegalCapacity,
+        public ?bool $pep,
+        public ?array $addresses,
+        public ?array $idCards,
+        public ?array $paymentAccounts,
+        public ?array $paymentAccountsDetails,
+        public ?int $updatedAt,
+        public ?VerifiedClaims $verifiedClaims,
+        public ?string $transactionIdentifier = null,
     ) {
         //
     }

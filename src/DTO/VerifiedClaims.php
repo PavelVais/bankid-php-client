@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Unnits\BankId\DTO;
 
-class VerifiedClaims
+readonly class VerifiedClaims
 {
     /**
      * @param Verification|null $verification
      * @param String[] $claims
      */
     public function __construct(
-        public readonly ?Verification $verification,
-        public readonly array $claims,
+        public ?Verification $verification,
+        public array $claims,
     ) {
         //
     }

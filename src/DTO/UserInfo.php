@@ -6,27 +6,27 @@ namespace Unnits\BankId\DTO;
 
 use Unnits\BankId\Enums\Gender;
 
-class UserInfo
+readonly class UserInfo
 {
     public function __construct(
-        public readonly string $customerUuid,
-        public readonly string $transactionIdentifier,
-        public readonly ?VerifiedClaims $verifiedClaims,
-        public readonly ?string $name,
-        public readonly ?string $givenName,
-        public readonly ?string $familyName,
-        public readonly ?string $middleName,
-        public readonly ?string $nickname,
-        public readonly ?string $preferredUsername,
-        public readonly ?string $email,
-        public readonly ?bool $emailVerified,
-        public readonly ?Gender $gender,
-        public readonly ?string $birthDate,
-        public readonly ?string $timezone,
-        public readonly ?string $locale,
-        public readonly ?string $phoneNumber,
-        public readonly ?bool $phoneNumberVerified,
-        public readonly ?string $updatedAt,
+        public string $customerUuid,
+        public string $transactionIdentifier,
+        public ?VerifiedClaims $verifiedClaims,
+        public ?string $name,
+        public ?string $givenName,
+        public ?string $familyName,
+        public ?string $middleName,
+        public ?string $nickname,
+        public ?string $preferredUsername,
+        public ?string $email,
+        public ?bool $emailVerified,
+        public ?Gender $gender,
+        public ?string $birthDate,
+        public ?string $timezone,
+        public ?string $locale,
+        public ?string $phoneNumber,
+        public ?bool $phoneNumberVerified,
+        public ?string $updatedAt,
     ) {
         //
     }

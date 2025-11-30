@@ -8,23 +8,23 @@ use DateTime;
 use Exception;
 use Unnits\BankId\Enums\AcrValue;
 
-class IdentityToken
+readonly class IdentityToken
 {
     public function __construct(
-        public readonly string $sub,
-        public readonly DateTime $expiresAt,
-        public readonly DateTime $issuedAt,
-        public readonly ?DateTime $authenticatedAt,
-        public readonly string $iss,
-        public readonly string $aud,
-        public readonly AcrValue $acr,
-        public readonly string $jti,
-        public readonly string $bankId,
-        public readonly ?StructuredScope $structuredScope,
-        public readonly ?string $nonce = null,
-        public readonly ?string $sid = null,
-        public readonly ?string $name = null,
-        public readonly ?string $rawValue = null,
+        public string $sub,
+        public DateTime $expiresAt,
+        public DateTime $issuedAt,
+        public ?DateTime $authenticatedAt,
+        public string $iss,
+        public string $aud,
+        public AcrValue $acr,
+        public string $jti,
+        public string $bankId,
+        public ?StructuredScope $structuredScope,
+        public ?string $nonce = null,
+        public ?string $sid = null,
+        public ?string $name = null,
+        public ?string $rawValue = null,
     ) {
         //
     }

@@ -9,7 +9,7 @@ use JsonSerializable;
 use Unnits\BankId\Enums\ResponseType;
 use Unnits\BankId\Enums\Scope;
 
-class RequestObject implements JsonSerializable
+readonly class RequestObject implements JsonSerializable
 {
     /**
      * @param int $maxAge
@@ -24,16 +24,16 @@ class RequestObject implements JsonSerializable
      * @param string|null $bankId
      */
     public function __construct(
-        public readonly int $maxAge,
-        public readonly string $acrValues,
-        public readonly array $scopes,
-        public readonly ResponseType $responseType,
-        public readonly StructuredScope $structuredScope,
-        public readonly string $txn,
-        public readonly string $state,
-        public readonly string $nonce,
-        public readonly string $clientId,
-        public readonly ?string $bankId = null,
+        public int $maxAge,
+        public string $acrValues,
+        public array $scopes,
+        public ResponseType $responseType,
+        public StructuredScope $structuredScope,
+        public string $txn,
+        public string $state,
+        public string $nonce,
+        public string $clientId,
+        public ?string $bankId = null,
     ) {
         //
     }

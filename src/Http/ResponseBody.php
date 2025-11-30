@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Unnits\BankId\Http;
 
-class ResponseBody
+readonly class ResponseBody
 {
     /**
      * @param array<int|string, mixed> $data
      */
-    public function __construct(public readonly array $data)
+    public function __construct(public array $data)
     {
         //
     }

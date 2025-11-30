@@ -8,7 +8,7 @@ use DateTime;
 use Exception;
 use Unnits\BankId\Traceable;
 
-class RequestObjectCreationResponse implements Traceable
+readonly class RequestObjectCreationResponse implements Traceable
 {
     /**
      * @param DateTime $expiresAt
@@ -18,11 +18,11 @@ class RequestObjectCreationResponse implements Traceable
      * @param string|null $traceId
      */
     public function __construct(
-        public readonly DateTime $expiresAt,
-        public readonly string $requestUri,
-        public readonly ?string $uploadUri = null,
-        public readonly ?array $uploadUris = null,
-        private readonly ?string $traceId = null,
+        public DateTime $expiresAt,
+        public string $requestUri,
+        public ?string $uploadUri = null,
+        public ?array $uploadUris = null,
+        private ?string $traceId = null,
     ) {
         //
     }

@@ -12,7 +12,16 @@ Even though some people may be both users and developers with respect to the lib
 The simpliest way to install this library is via composer:
 
 ```php
-composer require unnits/bankid-client
+composer require unnits/bankid-client:^1.0
+```
+
+**Requirements:**
+- PHP >= 8.2
+- ext-openssl
+
+For PHP 8.1 compatibility, use version 0.x:
+```php
+composer require unnits/bankid-client:^0.9
 ```
 
 ## Examples
