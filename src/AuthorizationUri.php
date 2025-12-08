@@ -12,7 +12,7 @@ use Unnits\BankId\Enums\CodeChallengeMethod;
 use Unnits\BankId\Enums\ResponseType;
 use Unnits\BankId\Enums\Scope;
 
-final class AuthorizationUri implements Stringable
+final readonly class AuthorizationUri implements Stringable
 {
     /**
      * @param string $baseUri
@@ -28,17 +28,17 @@ final class AuthorizationUri implements Stringable
      * @param string|null $requestUri
      */
     public function __construct(
-        private readonly string $baseUri,
-        private readonly string $clientId,
-        private readonly string $redirectUri,
-        private readonly string $state,
-        private readonly ?string $bankId = null,
-        private readonly ResponseType $responseType = ResponseType::Code,
-        private readonly CodeChallengeMethod $codeChallengeMethod = CodeChallengeMethod::Plain,
-        private readonly AcrValue $acrValue = AcrValue::LOA2,
-        private readonly array $scopes = [Scope::OpenId],
-        private readonly ?string $requestUri = null,
-        private readonly ?string $nonce = null,
+        private string $baseUri,
+        private string $clientId,
+        private string $redirectUri,
+        private string $state,
+        private ?string $bankId = null,
+        private ResponseType $responseType = ResponseType::Code,
+        private CodeChallengeMethod $codeChallengeMethod = CodeChallengeMethod::Plain,
+        private AcrValue $acrValue = AcrValue::LOA2,
+        private array $scopes = [Scope::OpenId],
+        private ?string $requestUri = null,
+        private ?string $nonce = null,
     ) {
         //
     }

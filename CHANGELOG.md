@@ -10,6 +10,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added `SignQualified` and `SignOfficiallyCertified` scopes to `Scope` enum
+## [1.0.0] - 2025-11-30
+
+### Changed
+
+- **BREAKING**: Minimum PHP version increased to 8.2 (from 8.1)
+- **BREAKING**: Upgraded web-token/jwt-framework from ^3.3 to ^4.0
+- Removed deprecated `contentEncryptionAlgorithmManager` parameter from JWEBuilder
+
+### Migration Guide
+
+For users upgrading from v0.x:
+
+1. Ensure your environment runs PHP >= 8.2
+2. Update your composer.json to require `unnits/bankid-client: ^1.0`
+3. Run `composer update`
+
+No application code changes required - the library's API remains backwards compatible.
+
+## [0.9.3] - 2025-11-19
+
+### Added
+
+- Add transactionIdentifier parameter to the Profile DTO
+
+## [0.9.2] - 2025-06-11
 
 ### Fixed
 

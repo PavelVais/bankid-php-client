@@ -9,23 +9,23 @@ use DateTimeInterface;
 use Exception;
 use JsonSerializable;
 
-class DocumentObject implements JsonSerializable
+readonly class DocumentObject implements JsonSerializable
 {
     public function __construct(
-        public readonly int $documentSize,
-        public readonly string $documentLanguage,
-        public readonly string $documentId,
-        public readonly string $documentHash,
-        public readonly bool $documentReadByEndUser,
-        public readonly string $hashAlgorithm,
-        public readonly DateTime $documentCreatedAt,
-        public readonly SignArea $signArea,
-        public readonly string $documentTitle = '',
-        public readonly string $documentSubject = '',
-        public readonly string $documentAuthor = '',
-        public readonly ?string $documentUri = null,
-        public readonly ?int $documentPriority = null,
-        public readonly ?string $signField = null,
+        public int $documentSize,
+        public string $documentLanguage,
+        public string $documentId,
+        public string $documentHash,
+        public bool $documentReadByEndUser,
+        public string $hashAlgorithm,
+        public DateTime $documentCreatedAt,
+        public SignArea $signArea,
+        public string $documentTitle = '',
+        public string $documentSubject = '',
+        public string $documentAuthor = '',
+        public ?string $documentUri = null,
+        public ?int $documentPriority = null,
+        public ?string $signField = null,
     ) {
         //
     }

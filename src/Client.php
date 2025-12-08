@@ -11,7 +11,6 @@ use Jose\Component\Core\JWK;
 use Jose\Component\Core\JWKSet;
 use Jose\Component\Encryption\Algorithm\ContentEncryption\A128CBCHS256;
 use Jose\Component\Encryption\Algorithm\KeyEncryption\RSAOAEP256;
-use Jose\Component\Encryption\Compression\CompressionMethodManager;
 use Jose\Component\Encryption\JWEBuilder;
 use Jose\Component\Encryption\Serializer\CompactSerializer;
 use Jose\Component\Signature\Algorithm\RS256;
@@ -46,14 +45,14 @@ use Unnits\BankId\Exceptions\TokenInfoException;
 use Unnits\BankId\Http\BankIdResponse;
 use Unnits\BankId\OIDC\Configuration;
 
-class Client
+readonly class Client
 {
     public function __construct(
-        private readonly ClientInterface $httpClient,
-        private readonly string $baseUri,
-        private readonly string $clientId,
-        private readonly string $clientSecret,
-        private readonly string $redirectUri,
+        private ClientInterface $httpClient,
+        private string $baseUri,
+        private string $clientId,
+        private string $clientSecret,
+        private string $redirectUri,
     ) {
         //
     }
@@ -420,16 +419,11 @@ class Client
         $keyEncryptionAlgorithm = new RSAOAEP256();
         $contentEncryptionAlgorithm = new A128CBCHS256();
 
-        // contentEncryptionAlgorithmManager has been deprecated
-        // as of web-token/jwt-library:3.3.0
-        // @see https://github.com/web-token/jwt-framework/blob/3.3.x/src/Library/Encryption/JWEBuilder.php#L58
         $jweBuilder = new JWEBuilder(
             new AlgorithmManager([
                 $keyEncryptionAlgorithm,
                 $contentEncryptionAlgorithm
-            ]),
-            contentEncryptionAlgorithmManager: null,
-            compressionManager: new CompressionMethodManager()
+            ])
         );
 
         $jwe = $jweBuilder->create()

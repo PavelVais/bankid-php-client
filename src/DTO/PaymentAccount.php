@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Unnits\BankId\DTO;
 
-class PaymentAccount
+readonly class PaymentAccount
 {
     public function __construct(
-        public readonly ?string $iban,
-        public readonly ?string $currency,
+        public ?string $iban,
+        public ?string $currency,
     ) {
         //
     }

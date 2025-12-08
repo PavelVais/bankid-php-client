@@ -7,12 +7,12 @@ namespace Unnits\BankId\DTO;
 use Exception;
 use JsonSerializable;
 
-class StructuredScope implements JsonSerializable
+readonly class StructuredScope implements JsonSerializable
 {
     public function __construct(
-        public readonly ?SignObject $signObject = null,
-        public readonly ?DocumentObjects $documentObjects = null,
-        public readonly ?DocumentObject $documentObject = null,
+        public ?SignObject $signObject = null,
+        public ?DocumentObjects $documentObjects = null,
+        public ?DocumentObject $documentObject = null,
     ) {
         //
     }

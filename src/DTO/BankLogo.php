@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Unnits\BankId\DTO;
 
-class BankLogo
+readonly class BankLogo
 {
     public function __construct(
-        public readonly string $id,
-        public readonly string $url,
-        public readonly int $width,
-        public readonly int $height,
+        public string $id,
+        public string $url,
+        public int $width,
+        public int $height,
     ) {
         //
     }
